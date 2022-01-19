@@ -206,38 +206,43 @@
 
 .defuse_plant_container {
 	position: fixed;
-	display: flex;
-	opacity: 1;
-	width: 503px;
-	height: 49px;
-	top: 70px;
-	align-items: center;
 	color: white;
-    justify-content: center;
-    background-color: rgba(0,0,0,0.65);
+	top: 130px;
+	padding: 100px;
+	font-size: 30px;
+	text-align: center;
 	.defuse_plant_bar {
-		height: 49px;
-		background-color: #3c3c3c;
+		height: 75px;
+		// background-color: #3c3c3c;
 		position: absolute;
-		width: 0%;
+		width: 0%
 	}
 	.defuse_plant_caption {
+		background-color: rgba(24, 30, 39, 0.8);
+		padding: 10px 25px 10px 25px;
 		z-index: 1;
 		display: flex;
 		text-transform: uppercase;
 		align-items: flex-end;
+		text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 		svg {
 			margin-right: 13px;
 		}
     }
-    &.right {
-        left: calc(50% + 71px);
-        .defuse_plant_bar {
+	&.right {
+		background-image: url(../../assets/PlantDefuse/Plant.gif);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 400px;
+        .defuse_plant_bar { 
             left: 0;
         }
     }
-    &.left {
-        right: calc(50% + 71px);
+ &.left {
+		background-image: url(../../assets/PlantDefuse/Defuse.gif);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 400px;
         .defuse_plant_bar {
             right: 0;
         }
