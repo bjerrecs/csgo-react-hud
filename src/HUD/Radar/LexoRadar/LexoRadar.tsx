@@ -47,7 +47,7 @@ class App extends React.Component<IProps> {
           height: config.playerSize,
         }}>
         <div className="background" style={{ transform: `rotate(${45 + player.position[2]}deg)` }}></div>
-        <div className="avatar">
+        <div className="playeravatar">
           <Avatar steamid={player.steamid} height={config.playerSize} width={config.playerSize} showSkull={false}/>
         </div>
       </div>

@@ -199,10 +199,10 @@ html, body, .map-container {
 }
 
 
-.avatar{
+.playeravatar{
     z-index: 0;
 }
 
-.avatar img{
+.playeravatar img{
     border-radius: 50%;
 }
