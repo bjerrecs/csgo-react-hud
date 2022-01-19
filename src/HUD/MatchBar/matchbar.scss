@@ -28,21 +28,9 @@
 	transform: translateX(-50%);
 	.CT {
 		color: var(--color-new-ct);
-		.round-thingy {
-			.inner {
-				background-color: #28abff;
-			}
-			background-color: #28abff80;
-		}
 	}
 	.T {
 		color: var(--color-new-t);
-		.round-thingy {
-			.inner {
-				background-color: #ffc600;
-			}
-			background-color: #ffc60080;
-		}
 	}
 	#timer {
 		display: flex;
@@ -142,9 +130,6 @@
         &.left {
             justify-content: center;
             flex-direction: row-reverse;
-            .round-thingy {
-                left: -30px;
-            }
             .logo {
                 justify-content: flex-end;
             }
@@ -152,9 +137,6 @@
         &.right {
             justify-content: center;
             flex-direction: row;
-            .round-thingy {
-                right: -30px;
-            }
             .logo {
                 justify-content: flex-start;
             }
@@ -169,20 +151,6 @@
 		font-weight: 600;
 		font-size: 30px;
 		background-color: var(--sub-panel-color);
-	}
-	.round-thingy {
-		width: 60px;
-		height: 60px;
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		.inner {
-			width: 35px;
-			height: 35px;
-			border-radius: 50%;
-		}
 	}
 	.score {
 		display: flex;
