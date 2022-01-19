@@ -4,6 +4,7 @@ import maps, { ScaleConfig, MapConfig } from './maps';
 import './index.css';
 import { RadarPlayerObject, RadarGrenadeObject } from './interface';
 import config from './config';
+import Avatar from "./../../Players/Avatar";
 interface IProps {
   players: RadarPlayerObject[];
   grenades: RadarGrenadeObject[];
@@ -46,7 +47,9 @@ class App extends React.Component<IProps> {
           height: config.playerSize,
         }}>
         <div className="background" style={{ transform: `rotate(${45 + player.position[2]}deg)` }}></div>
-        <div className="label">{player.label}</div>
+        <div className="avatar">
+          <Avatar steamid={player.steamid} height={config.playerSize} width={config.playerSize} showSkull={false}/>
+        </div>
       </div>
     )
   }
