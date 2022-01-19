@@ -52,26 +52,14 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		const countryName = country ? getCountry(country) : null;
 		return (
 			<div className={`observed ${player.team.side}`}>
-
-				<div className="avatar-box">
-					<div className="imagefade">
-						<span />
+				<div className="main_row">
+					{<Avatar steamid={player.steamid} height={140} width={140} showCam={this.state.showCam} slot={player.observer_slot} />}
+					<TeamLogo team={player.team} height={35} width={35} />
+					<div className="username_container">
+						<div className="username">{player.name}</div>
+						<div className="real_name">{player.realName}</div>
 					</div>
-					{<Avatar steamid={player.steamid} height={200} width={200} showCam={this.state.showCam} slot={player.observer_slot} />}
-					<div className="health_armor_container">
-						<div className="health-icon icon">
-								<HealthFull />
-						</div>
-						<div className="health text">{player.state.health}</div>
-						<div className="armor-icon icon">
-							{player.state.helmet ? <ArmorHelmet /> : <ArmorFull />}
-						</div>
-						<div className="health text">{player.state.armor}</div>
-					</div>
-				</div>
-				<div className="databox">
-					<div className="fist-row">
-					<TeamLogo team={player.team} height={45} width={45} /> <div className="username">{player.name}</div>
+					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`}>
 							<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
@@ -79,22 +67,31 @@ export default class Observed extends React.Component<{ player: Player | null, v
 								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
 						</React.Fragment>)}
 					</div>
-					</div>
-					<div className="second-row">
-						<div className="statistics">
-							<div className="bgcolor">
-								<Statistic label={"K"} value={stats.kills} />
-								<Statistic label={"A"} value={stats.assists} />
-								<Statistic label={"D"} value={stats.deaths} />
-								<Statistic label={"K/D"} value={ratio.toFixed(2)} />
-							</div>
+				</div>
+				<div className="stats_row">
+					<div className="health_armor_container">
+						<div className="health-icon icon">
+							<HealthFull />
 						</div>
-
-						<div className="ammo">
-							<div className="ammo_counter">
-								<div className="ammo_clip">{(currentWeapon && currentWeapon.ammo_clip) || "-"}</div>
-								<div className="ammo_reserve">/{(currentWeapon && currentWeapon.ammo_reserve) || "-"}</div>
-							</div>
+						<div className="health text">{player.state.health}</div>
+						<div className="armor-icon icon">
+							{player.state.helmet ? <ArmorHelmet /> : <ArmorFull />}
+						</div>
+						<div className="health text">{player.state.armor}</div>
+					</div>
+					<div className="statistics">
+						<Statistic label={"K"} value={stats.kills} />
+						<Statistic label={"A"} value={stats.assists} />
+						<Statistic label={"D"} value={stats.deaths} />
+						<Statistic label={"K/D"} value={ratio.toFixed(2)} />
+					</div>
+					<div className="ammo">
+						<div className="ammo_icon_container">
+							<Bullets />
+						</div>
+						<div className="ammo_counter">
+							<div className="ammo_clip">{(currentWeapon && currentWeapon.ammo_clip) || "-"}</div>
+							<div className="ammo_reserve">/{(currentWeapon && currentWeapon.ammo_reserve) || "-"}</div>
 						</div>
 					</div>
 				</div>
