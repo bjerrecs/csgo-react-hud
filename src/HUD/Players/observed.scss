@@ -54,8 +54,8 @@
                 align-items: center;
                 width: 140px;
                 position: absolute;
-                right: 0;
-                justify-content: fcenter;
+                right: 10px;
+                justify-content: flex-end;
                 svg {
                     height: 30px;
                 }
@@ -68,28 +68,32 @@
             height: 50%;
             flex-direction: row;
             align-items: center;
-            margin-top: -7px;
-            justify-content: space-around;
 
             .statistics {
                 width: 200px;
                 height: 50px;
                 padding-bottom: 10px;
+                position: absolute;
+                left: 0;
                 .bgcolor {
                     justify-content: center;
                     align-items: center;
                     display: flex;
                     flex-direction: row;
-                    gap:2rem;
                     font-size: 18px;
                     height: 100%;
+                    .stat {
+                        padding-left: 13px;
+                        padding-right: 13px;
+                    }
                 }
             }
             .ammo {
                 height: 50px;
                 width: 110px;
-                display: flex;
-                padding-bottom: 10px;
+                position: absolute;
+                right: 5px;
+                margin-bottom: -5px;
                 .ammo_counter {
                     flex: 1;
                     display: flex;
