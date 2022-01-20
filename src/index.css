@@ -45,12 +45,12 @@ code {
   --color-gray: rgba(191, 191, 191, 1.0);
   --color-moneys: #a7d32e;
   --dev-purple: rgba(200, 0, 255, 1);
-  --color-t: #EE374A;
-  --color-ct: rgb(0, 205, 236);
-  --color-new-t: rgb(238, 55, 74);
-  --color-new-t06: rgba(238, 55, 74, 0.6);
-  --color-new-ct: rgb(0, 205, 236);
-  --color-new-ct06: rgba(0, 205, 236,0.6);
+  --color-t: rgb(231, 161, 82);
+  --color-ct: rgb(77, 143, 196);
+  --color-new-t: rgb(231, 161, 82);
+  --color-new-t06: rgba(231, 161, 82, 0.6);
+  --color-new-ct: rgb(77, 143, 196);
+  --color-new-ct06: rgba(77, 143, 196,0.6);
   --color-bomb: rgb(242, 34, 34);
   --color-defuse: #2222f2;
 }
