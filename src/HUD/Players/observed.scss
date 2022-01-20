@@ -169,18 +169,18 @@
 
     &.T {
         .avatar-box {
-            background: rgba(217,148,8,0.6);
+            background: var(--color-new-t06);
         }
         .avatar-box .imagefade {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(217,148,8,0.6) 65%, rgba(217,148,8,1) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--color-new-t06) 65%, var(--color-new-t) 100%);
         }
     }
     &.CT {
         .avatar-box {
-            background: rgba(58,119,182,0.6);
+            background: var(--color-new-ct06);
         }
         .avatar-box .imagefade {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(58,119,182,0.6) 65%, rgba(58,119,182,1) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--color-new-ct06) 65%, var(--color-new-ct) 100%);
         }
     }
 }
