@@ -21,7 +21,7 @@
 	flex-direction: row;
 	position: fixed;
 	justify-content: center;
-	width: 1148px;
+	width: 1000px;
 	height: 70px;
 	top: 10px;
 	left: 50%;
@@ -36,7 +36,7 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		width: 126px;
+		width: 150px;
 		height: 115px;
 		background-color: var(--sub-panel-color);
         &.no-bo {
@@ -108,13 +108,12 @@
         }
 	}
 	.team {
-		width: 426px;
+		width: 350px;
 		display: flex;
 		align-items: center;
 		.logo {
 			display: flex;
 			flex-direction: row;
-			width: 105px;
 			height: 70px;
 			align-items: center;
 			overflow: hidden;
@@ -125,34 +124,39 @@
 			}
         }
         &.left {
-            justify-content: center;
             flex-direction: row-reverse;
             .logo {
-                justify-content: flex-end;
+                justify-content: center;
             }
+			.team-name {
+				justify-content: flex-end;
+			}
         }
         &.right {
-            justify-content: center;
             flex-direction: row;
             .logo {
-                justify-content: flex-start;
+                justify-content: center;
             }
+			.team-name {
+				justify-content: flex-start;
+			}
         }
 	}
 	.team-name {
 		display: flex;
-		width: 360px;
+		width: 200px;
 		height: 70px;
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
 		font-size: 30px;
+		color: #fff;
 		background-color: var(--sub-panel-color);
 	}
 	.score {
 		display: flex;
 		flex-direction: row;
-		width: 77px;
+		width: 70px;
 		height: 70px;
 		align-items: center;
 		justify-content: center;
@@ -255,7 +259,7 @@
 	position: fixed;
 	justify-content: center;
 	top: 80px;
-	width: 1148px;
+	width: 900px;
 	height: 50px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -304,14 +308,19 @@
 .container {
 	display: flex;
 	flex-direction: row;
-	width: 511px;
+	width: 375px;
 	height: 100%;
+
 }
 .container.left {
 	justify-content: flex-end;
+	left: 0;
+	position: absolute;
 }
 .container.right {
 	justify-content: flex-start;
+	right: 0;
+	position: absolute;
 }
 .series_wins {
 	display: flex;
@@ -334,6 +343,7 @@
 	height: 100%;
 	align-items: flex-start;
 	justify-content: flex-start;
+	margin-top: 5px;
 }
 .series_wins.left {
 	.wins_box_container {
