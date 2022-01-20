@@ -222,10 +222,11 @@
                 flex: 1;
                 min-width: 0;
                 height: 100%;
+                width: 335px!important;
                 .hp_bar {
                     height:50%;
                     position:absolute;
-                    width: 340px!important;
+                    max-width: 340px;
                     &.low {
                         background-color: red;
                     }
