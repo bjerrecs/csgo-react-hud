@@ -41,6 +41,18 @@
                 }
                 
             }
+            .specnumber{
+                position: absolute;
+                z-index: 10;
+                color: #2b2b2b;
+                background: #ddd;
+                width: 12px;
+                height: 12px;
+                font-size: 12px;
+                bottom: 5px;
+                left: 5px;
+                text-align: center;
+            }
             .dead-stats {
                 right: 8px;
             }
@@ -57,6 +69,18 @@
             flex-direction: row-reverse;
             .dead-stats {
                 left: 8px;
+            }
+            .specnumber{
+                position: absolute;
+                z-index: 10;
+                color: #2b2b2b;
+                background: #ddd;
+                width: 12px;
+                height: 12px;
+                font-size: 12px;
+                bottom: 5px;
+                right: 5px;
+                text-align: center;
             }
             .player_data {
                 flex-direction: row-reverse;

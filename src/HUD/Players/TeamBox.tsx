@@ -13,11 +13,20 @@ interface Props {
 
 export default class TeamBox extends React.Component<Props> {
   render() {
+    var i = 0;
+
+    if (this.props.side == 'right') {
+      var i = 5;
+    }
+    if (i == 10) {
+      var i = 0;
+    }
     return (
       <div className={`teambox ${this.props.team.side} ${this.props.side}`}>
         {this.props.players.map(player => <Player
           key={player.steamid}
           player={player}
+          specNumber={++i}
           isObserved={!!(this.props.current && this.props.current.steamid === player.steamid)}
           isFreezetime={this.props.isFreezetime}
         />)}
