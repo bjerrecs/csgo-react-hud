@@ -115,6 +115,7 @@
 			display: flex;
 			flex-direction: row;
 			height: 70px;
+			width: 70px;
 			align-items: center;
 			overflow: hidden;
 			background-color: var(--sub-panel-color);
@@ -129,7 +130,7 @@
                 justify-content: center;
             }
 			.team-name {
-				justify-content: flex-end;
+				justify-content: center;
 			}
         }
         &.right {
@@ -138,7 +139,7 @@
                 justify-content: center;
             }
 			.team-name {
-				justify-content: flex-start;
+				justify-content: center;
 			}
         }
 	}
@@ -182,13 +183,13 @@
 	position: fixed;
 	display: none;
 	opacity: 1;
-	width: 503px;
-	height: 50px;
-	top: 70px;
+	width: 340px;
+	height: 45px;
+	top: 65px;
 	align-items: center;
-	color: black;
+	color: white;
 	justify-content: center;
-	background-color: white;
+	background-color: rgba(24, 30, 39, 0.8);
 	font-size: 20px;
 	font-family: Montserrat;
     font-weight: 600;
@@ -198,10 +199,10 @@
         animation-fill-mode: forwards;
     }
     &.right {
-        left: calc(50% + 71px);
+        left: calc(50% + 75px);
     }
     &.left {
-        right: calc(50% + 71px);
+        right: calc(50% + 75px);
     }
 }
 
