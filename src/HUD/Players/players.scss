@@ -166,6 +166,12 @@
                         color: #466722;
                     }
                 }
+                .player_stats {
+                    .hp_bar {
+                        background-color: gray;
+                        opacity: .5;
+                    }
+                }
             }
         }
         .player_side_bar {
