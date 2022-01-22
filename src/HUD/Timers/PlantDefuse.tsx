@@ -2,8 +2,6 @@ import React from "react";
 
 import { Timer } from "../MatchBar/MatchBar";
 import { Player } from "csgogsi";
-import * as I from "./../../assets/Icons";
-
 interface IProps {
   timer: Timer | null;
   side: "right" | "left"

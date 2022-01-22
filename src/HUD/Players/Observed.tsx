@@ -4,9 +4,7 @@ import Weapon from "./../Weapon/Weapon";
 import Avatar from "./Avatar";
 import TeamLogo from "./../MatchBar/TeamLogo";
 import "./observed.scss";
-import { apiUrl } from './../../api/api';
-import { getCountry } from "./../countries";
-import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icons';
+import { ArmorHelmet, ArmorFull, HealthFull } from './../../assets/Icons';
 import { Veto } from "../../api/interfaces";
 import { actions } from "../../App";
 
@@ -43,13 +41,11 @@ export default class Observed extends React.Component<{ player: Player | null, v
 	render() {
 		if (!this.props.player) return '';
 		const { player } = this.props;
-		const country = player.country || player.team.country;
 		const weapons = Object.values(player.weapons).map(weapon => ({ ...weapon, name: weapon.name.replace("weapon_", "") }));
 		const currentWeapon = weapons.filter(weapon => weapon.state === "active")[0];
 		const grenades = weapons.filter(weapon => weapon.type === "Grenade");
 		const { stats } = player;
 		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths;
-		const countryName = country ? getCountry(country) : null;
 		return (
 			<div className={`observed ${player.team.side}`}>
 

@@ -15,11 +15,11 @@ export default class TeamBox extends React.Component<Props> {
   render() {
     var i = 0;
 
-    if (this.props.side == 'right') {
-      var i = 5;
+    if (this.props.side === 'right') {
+      i = 5;
     }
-    if (i == 10) {
-      var i = 0;
+    if (i === 10) {
+      i = 0;
     }
     return (
       <div className={`teambox ${this.props.team.side} ${this.props.side}`}>
