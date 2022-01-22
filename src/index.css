@@ -56,4 +56,10 @@ code {
 }
 
 
-
+.teamlogo {
+  width: 300px;
+  overflow: hidden;
+  opacity: .25;
+  position: absolute;
+  z-index: -1;
+}

@@ -71,7 +71,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 				</div>
 				<div className="databox">
 					<div className="fist-row">
-					<TeamLogo team={player.team} height={45} width={45} /> <div className="username">{player.name}</div>
+					<TeamLogo team={player.team} height={35} width={35} /> <div className="username">{player.name}</div>
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`}>
 							<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
