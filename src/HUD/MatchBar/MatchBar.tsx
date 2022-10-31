@@ -6,6 +6,7 @@ import Bomb from "./../Timers/BombTimer";
 import Countdown from "./../Timers/Countdown";
 import { GSI } from "../../App";
 import { Match } from "../../api/interfaces";
+import EventBar from "./eventbar";
 
 function stringToClock(time: string | number, pad = true) {
   if (typeof time === "string") {
@@ -186,6 +187,7 @@ export default class TeamBox extends React.Component<IProps, IState> {
     }
     return (
       <>
+        <EventBar />
         <div id={`matchbar`}>
           <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.side === "left"} />
           <div className={`score left ${left.side}`}>{left.score}</div>

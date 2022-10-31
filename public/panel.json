@@ -30,6 +30,36 @@
         ]
     },
     {
+        "label": "Event Settings",
+        "name":"event",
+        "inputs": [
+            {
+                "type": "text",
+                "name": "title",
+                "label": "Event title"
+            },
+            {
+                "type": "text",
+                "name": "content",
+                "label": "Event content"
+            },
+            {
+                "type": "action",
+                "name": "eventState",
+                "values": [
+                    {
+                        "name": "show",
+                        "label": "Show trivia"
+                    },
+                    {
+                        "name": "hide",
+                        "label": "Hide trivia"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "label": "Display settings",
         "name":"display_settings",
         "inputs": [

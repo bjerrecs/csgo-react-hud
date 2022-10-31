@@ -13,13 +13,10 @@ interface Props {
 
 export default class TeamBox extends React.Component<Props> {
   render() {
-    var i = 0;
+    var i = -1;
 
     if (this.props.side === 'right') {
-      i = 5;
-    }
-    if (i === 10) {
-      i = 0;
+      i = 4;
     }
     return (
       <div className={`teambox ${this.props.team.side} ${this.props.side}`}>

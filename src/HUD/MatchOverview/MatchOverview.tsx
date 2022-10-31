@@ -9,6 +9,11 @@ interface IProps {
     veto: I.Veto | null
 }
 
+var Style = {
+    //backgroundColor: team.extra.BGColor,
+    opacity: "0.85"
+  };
+
 export default class MatchOverview extends React.Component<IProps> {
 	render() {
         const { match, teams, show } = this.props;
@@ -23,7 +28,7 @@ export default class MatchOverview extends React.Component<IProps> {
                 <div className="match-overview-teams">
                     <div className="match-overview-team">
                         <div className="match-overview-team-logo">
-                            <TeamLogo team={left} height={40} />
+                            <TeamLogo team={left} height={40}/>
                         </div>
                         <div className="match-overview-team-name">{left.name}</div>
                     </div>

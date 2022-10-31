@@ -27,6 +27,7 @@ export default class Ladder extends React.Component<Props> {
 
 	copyMatchups = (): I.DepthTournamentMatchup[] => {
 		if (!this.props.tournament) return [];
+		console.log(this.props.tournament.matchups)
 		const matchups = JSON.parse(JSON.stringify(this.props.tournament.matchups)) as I.DepthTournamentMatchup[];
 		return matchups;
 	};
