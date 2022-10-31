@@ -55,14 +55,22 @@ export default class Observed extends React.Component<{ player: Player | null, v
 					</div>
 					{<Avatar steamid={player.steamid} height={200} width={200} showCam={this.state.showCam} slot={player.observer_slot} />}
 					<div className="health_armor_container">
-						<div className="health-icon icon">
+						<div className="health-div">
+							<div className="health-icon icon">
 								<HealthFull />
+							</div>
+							<div className="health text">
+								{player.state.health}
+							</div>
 						</div>
-						<div className="health text">{player.state.health}</div>
-						<div className="armor-icon icon">
-							{player.state.helmet ? <ArmorHelmet /> : <ArmorFull />}
+						<div className="armor-div">
+							<div className="armor-icon icon">
+								{player.state.helmet ? <ArmorHelmet /> : <ArmorFull />}
+							</div>
+							<div className="health text">
+								{player.state.armor}
+							</div>
 						</div>
-						<div className="health text">{player.state.armor}</div>
 					</div>
 				</div>
 				<div className="databox">

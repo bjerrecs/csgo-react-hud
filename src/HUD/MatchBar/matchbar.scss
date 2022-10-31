@@ -244,10 +244,10 @@
 	display: none;
 	opacity: 1;
 	width: 270px;
-	height: 40px;
+	height: 35px;
 	top: 70px;
 	align-items: center;
-	color: white;
+	color: white!important;
 	justify-content: center;
 	background-color: rgba(43, 43, 43);
 	font-size: 20px;
@@ -257,6 +257,7 @@
         display: flex;
         animation: ShowWinCycle 5s linear 1;
         animation-fill-mode: forwards;
+		
     }
     &.right {
         right: 85px;
