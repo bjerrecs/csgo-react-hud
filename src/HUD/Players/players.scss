@@ -345,8 +345,24 @@
                 background-color: var(--sub-panel-color);
                 width: 70px;
                 display: flex;
-                align-items: flex-end;
-                justify-content: center;
+                align-items: center;
+                justify-content: flex-end;
+                overflow: hidden;
+                position: relative;
+                .videofeed {
+                    width:70px;
+                    height:70px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    video {
+                        height: 70px;
+                        position: absolute;
+                    }
+                }
+                img {
+                    border-radius:50%;
+                }
             }
         }
     }
